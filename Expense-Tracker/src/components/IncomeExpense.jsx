@@ -1,21 +1,18 @@
-import React, {useEffect,useState} from 'react';
-
-function IncomeExpense({transactions}) {
-    const [incomeTransactions, setIncomeTransactions] = useState([]);
-    const [expenseTransactions, setExpenseTransactions] = useState([]);
+import  {useEffect,useState,useContext} from 'react';
+import {TransactionContext} from '../contexts/transactions'
+function IncomeExpense() {
     const [totalIncome, setTotalIncome] = useState(0);
     const [totalExpense, setTotalExpense] = useState(0);
-    
+    const { transactions } = useContext(TransactionContext);
+
     // Effect to update income and expenses when transactions change
     useEffect(() => {
       // Calculate total income and total expenses using reduce
-      const { totalIncome, totalExpense, incomeTransactions, expenseTransactions } = transactions.reduce(
+      const { totalIncome, totalExpense } = transactions.reduce(
         (acc, transaction) => {
           if (transaction.amount > 0) {
-            acc.incomeTransactions.push(transaction);
             acc.totalIncome += transaction.amount;
           } else {
-            acc.expenseTransactions.push(transaction);
             acc.totalExpense += Math.abs(transaction.amount);
           }
           return acc;
@@ -23,16 +20,12 @@ function IncomeExpense({transactions}) {
         {
           totalIncome: 0,
           totalExpense: 0,
-          incomeTransactions: [],
-          expenseTransactions: [],
         }
       );
     
-      // Update the state using the updater functions to ensure the latest state is used
-      setIncomeTransactions(() => incomeTransactions);
-      setExpenseTransactions(() => expenseTransactions);
-      setTotalIncome(() => totalIncome);
-      setTotalExpense(() => totalExpense);
+      // Update the state
+      setTotalIncome(totalIncome);
+      setTotalExpense(totalExpense);
     
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [transactions]);

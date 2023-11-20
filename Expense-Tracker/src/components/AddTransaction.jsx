@@ -7,7 +7,7 @@ export default function AddTransaction() {
     const [amount,setAmonut]= useState(0);
     const handleAddTransaction = (e) => {
         e.preventDefault();
-        addTransactions((prev)=>{ return [...prev,{'name':name,'amount':amount}]})
+        addTransactions((prev)=>{ return [...prev,{'name':name,'amount':Number(amount)}]})
     }
   return (
     <div className='add-transaction  flex flex-col items-center justify-center'>
