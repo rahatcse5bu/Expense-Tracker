@@ -8,14 +8,14 @@ export const TransactionContext = createContext({
 
 const TransactionProvider = (props) => {
 	const [transactions, addTransactions] = useState([
-		{
-			name: "biscuits",
-            amount :234.23
-		},
-		{
-			name: "tea",
-            amount :2.123
-		},
+		// {
+		// 	name: "biscuits",
+        //     amount :234.23
+		// },
+		// {
+		// 	name: "tea",
+        //     amount :2.123
+		// },
 	]);
 
 	// const [success, setSuccess] = useState(true);

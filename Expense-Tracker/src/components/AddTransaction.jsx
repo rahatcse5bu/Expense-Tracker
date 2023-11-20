@@ -11,12 +11,12 @@ export default function AddTransaction() {
     }
   return (
     <div className='add-transaction  flex flex-col items-center justify-center'>
-      <h4 className='text-white py-4'>Add New transaction</h4>
-      <label className='block py-2 text-white'>Name</label>
-      <input value={name} className='rounded-md px-2 py-2' type='text' onChange={(e)=>{setName(e.target.value)}} placeholder='Enter text'></input>
+      <h4 className='text-white py-3'>Add New Transaction</h4>
+      <label className='block pb-2 text-white'>Name</label>
+      <input value={name} className='rounded-md px-2 py-2' type='text' onChange={(e)=>{setName(e.target.value)}} placeholder='Enter Item'></input>
 <label className='block py-2 text-white'>Amount</label>
 <input value={amount} className='rounded-md px-2 py-2' type='number' onChange={(e)=>{setAmonut(e.target.value)}} placeholder='0'/>
-<button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded my-4" onClick={handleAddTransaction}>
+<button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded my-5" onClick={handleAddTransaction}>
      Add Transaction
     </button>
     </div>
