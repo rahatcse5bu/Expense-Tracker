@@ -1,9 +1,7 @@
 // import React  from 'react';
 
-
 // eslint-disable-next-line react/prop-types
 export default function Transaction({transaction}) {
-//  console.log(transactions[0].name);
 const color = transaction.amount>=0? 'green' : 'red';
 const sign = transaction.amount>=0? '+' : '-';
   return (
