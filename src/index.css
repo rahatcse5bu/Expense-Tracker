@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rightGreenBorder{
+border-right: 4px solid green;
+}
+.rightRedBorder{
+border-right: 4px solid red;
+}

@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const TransactionContext = createContext({
 	transactions: [],
-	success: true,
+	// success: true,
 });
 
 const TransactionProvider = (props) => {
@@ -17,6 +17,7 @@ const TransactionProvider = (props) => {
         //     amount :2.123
 		// },
 	]);
+
 
 	// const [success, setSuccess] = useState(true);
 
