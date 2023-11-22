@@ -1,7 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* Set initial scale */
+@viewport {
+    zoom: 1.0;
+  }
+  
+  /* Set minimum and maximum scale */
+  @viewport {
+    min-zoom: 1.0;
+    max-zoom: 2.0;
+  }
 .rightGreenBorder{
 border-right: 4px solid green;
 }

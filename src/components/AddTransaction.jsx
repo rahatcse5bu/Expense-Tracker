@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react'
+import  { useState,useContext } from 'react'
 import {TransactionContext} from '../contexts/transactions'
 export default function AddTransaction() {
     const  {addTransactions}  = useContext(TransactionContext);
