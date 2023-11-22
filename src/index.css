@@ -11,6 +11,9 @@
     min-zoom: 1.0;
     max-zoom: 2.0;
   }
+#root{
+padding: 0;
+  }
 .rightGreenBorder{
 border-right: 4px solid green;
 }
