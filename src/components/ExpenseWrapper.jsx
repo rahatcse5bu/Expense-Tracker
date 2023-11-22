@@ -6,7 +6,7 @@ import AddTransaction from './AddTransaction'
 function ExpenseWrapper() {
 
     return (
-        <div className='container mx-auto md:w-[400px] bg-slate-900 rounded-md px-2'>
+        <div className='container mx-auto w-full md:w-[400px] bg-slate-900 rounded-md px-2'>
 
              <Header/>
              <Balance/>
