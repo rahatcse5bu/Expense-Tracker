@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const TransactionContext = createContext({
 	transactions: [],
@@ -7,16 +7,21 @@ export const TransactionContext = createContext({
 });
 
 const TransactionProvider = (props) => {
-	const [transactions, addTransactions] = useState([
-		// {
-		// 	name: "biscuits",
-        //     amount :234.23
-		// },
-		// {
-		// 	name: "tea",
-        //     amount :2.123
-		// },
-	]);
+	const savedTransaction = JSON.parse([localStorage.getItem('transactions')]) || [];
+	// const savedTransaction =  [];
+	// console.log('test'+JSON.stringify(localStorage.getItem('transactions')))
+	const [transactions, addTransactions] = useState(savedTransaction);
+	console.log('9999'+JSON.parse(JSON.stringify([transactions])))
+	// const [transactions, addTransactions] = useState([
+	// 	// {
+	// 	// 	name: "biscuits",
+    //     //     amount :234.23
+	// 	// },
+	// 	// {
+	// 	// 	name: "tea",
+    //     //     amount :2.123
+	// 	// },
+	// ]);
 
 
 	// const [success, setSuccess] = useState(true);
