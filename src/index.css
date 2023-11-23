@@ -12,7 +12,7 @@
     max-zoom: 2.0;
   }
 #root{
-padding: 0;
+padding: 0 !important;
   }
 .rightGreenBorder{
 border-right: 4px solid green;
